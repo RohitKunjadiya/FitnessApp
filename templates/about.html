@@ -1,0 +1,108 @@
+{% extends 'layout.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2><b>About the Project: Fitness Adviser App</b></h2>
+        <p>The Fitness Adviser App is an AI-powered web application designed to help users achieve their fitness goals by providing personalized workout routines, diet plans, and health tips. Built using LangChain, this app leverages advanced natural language processing models to engage users in meaningful conversations and deliver customized fitness advice.</p>
+
+        <h3>Features:</h3>
+        <ul>
+            <li><strong>Personalized Workout Plans:</strong> Users can input their fitness goals (e.g., weight loss, muscle gain, strength training), and the app generates a tailored workout schedule based on their preferences and available equipment.</li>
+            <li><strong>Diet Recommendations:</strong> The app provides meal suggestions, ensuring that users’ nutritional needs are met based on their fitness goals, dietary restrictions, and lifestyle.</li>
+            <li><strong>Goal Tracking and Monitoring:</strong> Track progress by recording workouts, meals, and other health metrics. The app adjusts the recommendations based on users’ progress over time.</li>
+        </ul>
+
+        <h3>Technology Stack:</h3>
+        <p>This project is built using a variety of technologies to ensure a smooth user experience and powerful backend logic:</p>
+        <ul>
+            <li><strong>LangChain:</strong> For building AI-driven conversational workflows, allowing users to interact with the app naturally.</li>
+            <li><strong>Flask:</strong> For developing the backend API and serving the app’s functionality to the frontend.</li>
+            <li><strong>HTML/CSS:</strong> For designing the frontend and ensuring a responsive design.</li>
+        </ul>
+
+
+        <h3>Our Team</h3>
+        <ul>
+            <li><strong>Rohit Kunjadiya</strong></li>
+        </ul>
+
+        <div class="contact-btn-container">
+            <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact Us</a>
+        </div>
+    </div>
+
+    <style>
+        body {
+                background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #ffffffa5;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.404);
+            text-align: left;
+        }
+
+        .container h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #000000;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .container ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .container ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: black;
+        }
+
+        .container h3 {
+            font-size: 28px;
+            color: #007bff;
+            margin-top: 30px;
+        }
+
+        .container strong {
+            font-weight: 600;
+        }
+
+        .contact-btn-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+{% endblock %}
