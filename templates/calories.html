@@ -28,15 +28,19 @@
 </head>
 <body>
   <div class="container text-center">
+    <div class="mb-3 text-start">
+      <a href="/" class="btn btn-dark">🏠 Home</a>
+    </div>
+
     <h2 class="mb-4">AI Calories Advisor 🍽️</h2>
-    
+
     <div class="card">
       <form id="upload-form">
         <div class="mb-3">
           <label for="file" class="form-label">Upload Food Image:</label>
           <input class="form-control" type="file" id="file" name="file" accept="image/*" required>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Analyze Image 🧠</button>
+        <button type="submit" class="btn btn-dark w-100">Analyze Image 🧠</button>
       </form>
 
       <div id="result" class="mt-4 result-box" style="display:none;"></div>

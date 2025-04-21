@@ -44,6 +44,10 @@
     <h2 class="mb-4">Daily Health Tracker 🏃‍♂️</h2>
 
     <div class="card">
+      <div class="mb-3 text-start">
+        <a href="/" class="btn btn-dark">🏠 Home</a>
+      </div>
+
       <form action="/tracker/track" method="POST">
         <div class="mb-3">
           <label for="weight" class="form-label">Weight (kg):</label>
@@ -57,7 +61,7 @@
           <label for="calories" class="form-label">Calories Consumed:</label>
           <input type="number" class="form-control" id="calories" name="calories" required>
         </div>
-        <button type="submit" class="btn btn-success w-100">Track Today ✅</button>
+        <button type="submit" class="btn btn-dark w-100">Track Today ✅</button>
       </form>
 
       {% if msg %}

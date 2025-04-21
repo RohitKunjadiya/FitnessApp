@@ -28,6 +28,10 @@
 </head>
 <body>
     <div class="container">
+        <div class="mb-3 text-start">
+            <a href="/" class="btn btn-dark">🏠 Home</a>
+        </div>
+
         <h2 class="text-center mb-4">🏋️‍♀️ Workout Planner</h2>
         <form method="POST" action="/workout/recommend">
             <div class="mb-3">
@@ -38,7 +42,7 @@
                 <label for="time" class="form-label">Available Time (in minutes)</label>
                 <input type="number" class="form-control" id="time" name="time" placeholder="e.g. 30" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Get Workout Plan</button>
+            <button type="submit" class="btn btn-dark w-100">Get Workout Plan</button>
         </form>
 
         {% if recommendation %}
