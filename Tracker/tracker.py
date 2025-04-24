@@ -8,11 +8,7 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Set up Gemini model
-try:
-    model = genai.GenerativeModel("gemini-1.5-pro")
-except Exception as e:
-    model = None
-    print("Error loading Gemini model:", e)
+model = genai.GenerativeModel("gemini-1.5-pro")  # Ensure this model exists
 
 # Tracker Blueprint
 app_tracker = Blueprint("app_tracker", __name__, template_folder="templates")
