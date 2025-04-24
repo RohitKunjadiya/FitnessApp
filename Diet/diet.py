@@ -10,8 +10,12 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 app_diet = Blueprint("app_diet", __name__, template_folder="templates")
 
-# Gemini model (text-only)
-model = genai.GenerativeModel("gemini-1.5-pro")
+# Set up Gemini model
+try:
+    model = genai.GenerativeModel("gemini-1.5-pro")
+except Exception as e:
+    model = None
+    print("Error loading Gemini model:", e)
 
 @app_diet.route('/')
 def index():
